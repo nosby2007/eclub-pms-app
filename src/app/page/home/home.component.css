@@ -1,0 +1,34 @@
+.container{
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(216, 207, 236);
+    background: rgb(174, 174, 248), transparent;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 30% 70% 70% 30% / 54% 26% 74% 46%  ;
+}
+h1,p{
+    position: relative;
+    color: rgb(52, 8, 250);
+    font-weight: bold;
+    top: 40%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 2rem;
+    color: black;
+    text-transform: none;
+}
+.btn{
+    margin-left: 50%;
+    color: white;
+    top: 60%;
+}
+.container img{
+    border-radius: 50%;
+    top: 70%;
+    margin-top: 110px;
+}
