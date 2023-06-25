@@ -1,0 +1,25 @@
+<div class="navbar navbar-expand-md fixed-top fixed-header">
+    <div class="container">
+        <a class="navbar-brand fw-900" style="font-weight: 900; color: rgb(172, 8, 248);" href="">E-CLUB PMS APP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav>
+            <span style="float:left">
+                <a routerLink="/home">Acceuil</a>
+                <a routerLink="/propos">Apropos</a>
+                <a routerLink="/service">Nos services</a>
+                <a routerLink="contact">Contact</a>
+
+                <a *ngIf="!loggedInUser" routerLink="login">Se connecter</a>
+                <a *ngIf="!loggedInUser" routerLink="signOut">deconnexion</a>
+                <a *ngIf="loggedInUser" href="javascript:void(0);">Welcome {{loggedInUser}}</a>
+                <a *ngIf="loggedInUser" href="javascript:void(0);" (click)="logout()">Logout</a>
+            </span>
+            <span style="float:right;">
+                | <a href="javascript:void(0);"> {{jstoday}}</a>
+            </span> 
+        </nav>
+    </div>
+</div>
