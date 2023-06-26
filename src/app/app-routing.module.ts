@@ -7,12 +7,14 @@ import { NousContacterComponent } from './page/nous-contacter/nous-contacter.com
 import { LoginComponent } from './sharePage/login/login.component';
 import { LogOutComponent } from './sharePage/log-out/log-out.component';
 import { RegisterComponent } from './sharePage/register/register.component';
+import { AuthGuard } from './Auth/authguard.guard';
 
 const routes: Routes = [
+  {path: '', redirectTo:'login', pathMatch:'full'},
   {path: 'home' , component: HomeComponent},
-  {path: 'apropos' , component: AProposComponent},
-  {path: 'service' , component: NosServicesComponent},
-  {path: 'contact' , component: NousContacterComponent},
+  {path: 'apropos' , component: AProposComponent,canActivate:[AuthGuard]},
+  {path: 'service' , component: NosServicesComponent,canActivate:[AuthGuard]},
+  {path: 'contact' , component: NousContacterComponent,canActivate:[AuthGuard]},
   {path: 'login' , component: LoginComponent},
   {path: 'signOut' , component: LogOutComponent},
   {path: 'register' , component: RegisterComponent}

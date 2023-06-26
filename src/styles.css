@@ -1,13 +1,21 @@
+*,
+*::before,
+*::after{
+    --bg: #0a1428;
+    --ponk: #be4b34;
+    --lg: #16eac9;
+    --fc:#5974f9;
+    --white: #fff;
+
+    
+}
+
+
 body{
     margin:0;
     padding: 0;
     font-family: nunito sans, sans-serif;
-    display: flex;
     background: linear-gradient(rgb(232, 241, 236), rgb(193, 184, 241));
-    justify-content: center;
-    align-items: center;
-    height: 100vh;  
-    z-index: 0;
 }
 
 

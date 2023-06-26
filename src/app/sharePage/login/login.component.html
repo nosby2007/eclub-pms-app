@@ -1,24 +1,20 @@
 <div class="container">
-    <div class="blob">
-        <h1> Welcome to les soeurettes</h1>
-        <p>Vous Soigner, notre Joie</p>
-    </div>
       <div class="form-container">
         <form>
           <h1>connexion</h1>
           <div class="form-group">
-            <input type="email" required />
-            <label for="email">Email</label>
+            <input type="email" class="form-cpntrol" name="email" [(ngModel)]="email" required />
+            <label for="email" >Email</label>
           </div>
           <div class="form-group">
-            <input type="password" required />
+            <input type="password" class="form-cpntrol" name="password" [(ngModel)]="password" required />
             <label for="password">mot de passe</label>
           </div>
 
           <div class="fgpwd"><a href="#">mot de passe oublié?</a></div>
 
-          <button type="submit" (click)="login()">se connecter</button>
-          <div class="register"><a href="#">nous rejoindre</a></div>
+          <button type="button" class="btn btn-info" (click)="login()">se connecter</button>
+          <div class="register"><a routerLink="/register"><strong style="color: red;">Pas de Compte?</strong>  nous rejoindre</a></div>
         </form>
       </div>
 

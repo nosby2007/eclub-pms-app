@@ -1,16 +1,7 @@
-body{
-    margin:0;
-    padding: 0;
-    font-family: nunito sans, sans-serif;
-    display: flex;
-    background: linear-gradient(rgb(232, 241, 236), rgb(193, 184, 241));
-    justify-content: center;
-    align-items: center;
-    height: 100vh;  
-    z-index: 0;
-}
+
 .container{
-    position: absolute;
+    top: 10%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,38 +9,8 @@ body{
     height: 400px;
     background-color: transparent;
     border-radius: 45px;
-    z-index: 3;
-}
-.blob{
-    z-index: -1;
-    position: relative;
-    background: linear-gradient(red, purple);
-    height: 500px;
-    width: 500px;
-    border-radius: 30% 70% 70% 30% / 30% 28% 72% 70%;
-    transform: translate(250px, 80%) rotate(60deg);
-    animation: blob 20s infinite alternate;
-    transition: 1s cubic-bezier(0.215, 0.16, 0.355, 1); 
-    
 }
 
-.blob:hover{
-    filter: blur(30px);
-    height: 560px;
-    width: 560px;
-    box-shadow: inset 100px 100px white, inset 200px 200px purple, inset 300px 300px red;
-   
-}
-.blob h1, P {
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 700;
-    color: var(--white);
-    font-size: 2rem;
-    align-items: center;
-    position: relative;
-    top: 40%;
-}
 
 .container span{
     z-index: 2;
@@ -101,16 +62,17 @@ body{
     background-color:transparent ;
     border: 2px solid var(--fc);
     border-radius: 50px;
-    color: var(--lg);
+    color: var(--ponk);
     outline: none;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 600;
     transition: .3s ease-in-out;
 }
 
 .form-group input:focus,
 .form-group input:valid{
     border-color: var(--lg);
+    text-align: center;
 }
 
 .form-group label{
@@ -166,20 +128,4 @@ button:hover{
 .register a:hover{
     text-decoration: underline;
     color: var(--ponk);
-}
-
-@keyframes blob{
-    15%{
-        transform: translate(250px, 80%) rotate(60deg);
-        border-radius: 32% 48% 55% 75% / 38% 65% 35% 72%
-    }
-    40%{
-        transform: translate(-60%, -50%) rotate(30deg);
-        border-radius: 30% 70% 23% 77% / 8% 30% 70% 92% ;
-    }
-    75%{
-        transform: translate(0%, -100%) rotate(-120deg);
-        border-radius: 42% 58% 45% 55% / 38% 55% 45% 62% ;
-    }
-
 }

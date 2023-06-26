@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent{
-  title = 'soeurette-managment';
+  title = 'ECLUB-PMS-APP';
   today = new Date();
   jstoday = '';
   loggedInUser: any;
@@ -16,7 +16,7 @@ export class NavbarComponent{
   mynumber: any;
   constructor(private router: Router) {
     this.jstoday = formatDate(this.today, 'MMM dd, yyyy , hh:mm:ss a', 'en-US');
-    this.mynumber = +911234567890;
+    this.mynumber = +4787870612;
   }
   ngOnInit(): void {
      this.loggedInUser = sessionStorage.getItem('user');
@@ -24,5 +24,6 @@ export class NavbarComponent{
   logout() {
     this.loggedInUser = null;
     this.router.navigate(['login']);
+    alert('Merci pour votre visite' +' ' + 'A vous revoir Bientôt')
   }
 }
