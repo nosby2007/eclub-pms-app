@@ -23,7 +23,7 @@ export class NavbarComponent{
   }
   logout() {
     this.loggedInUser = null;
-    this.router.navigate(['login']);
+    this.router.navigate(['signOut']);
     alert('Merci pour votre visite' +' ' + 'A vous revoir Bientôt')
   }
 }

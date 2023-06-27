@@ -1,6 +1,7 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+  
   nav a{
     color: #4b07e9;
     text-decoration: none;
@@ -11,6 +12,6 @@
 
 nav a:hover{
     color: gold;
-    background-color: rgb(53, 45, 45);
+    background-color: rgb(253, 9, 212);
     font-weight: bold;
 }

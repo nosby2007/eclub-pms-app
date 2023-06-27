@@ -1,0 +1,57 @@
+.header {
+    background-image: url(https://res.cloudinary.com/dtdpx59sc/image/upload/v1687839937/website%20assets/pexels-sora-shimazaki-5673488_gfctj5.jpg);
+    background-size: cover;
+    height: 500px;
+    background-position: bottom;
+    position: relative;
+
+}
+
+.header h1 {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    font-family: numito, sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    animation: exemple linear alternate infinite;
+    animation-delay: .5s;
+    animation-duration: 4s;
+}
+
+.header h1:hover {
+    font-size: 4rem;
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.service {
+    background: transparent;
+    display: flex;
+    margin-right: 10px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.cardis {
+    margin:5px 5px;
+}
+
+
+@keyframes exemple {
+    from {
+        color: #fff;
+    }
+
+    to {
+        color: rgb(6, 224, 42);
+    }
+
+    to {
+        background-color: rgb(154, 11, 211);
+        background-size: cover;
+        padding: 100X;
+
+    }
+}

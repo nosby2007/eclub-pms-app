@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,50 +9,55 @@
     background-color: transparent;
     border-radius: 45px;
 }
-.container img{
+
+.container img {
     border-radius: 50%;
     margin-left: 300px;
 }
 
 
-.accordion{
+.accordion {
     justify-content: center;
+    width: 100%;
+    margin-left: 70px;
+    padding-right:inherit;
 }
 
 .team-section {
     align-items: center;
     justify-content: center;
-  }
-  
+}
+
 .team-member {
     align-items: center;
     justify-content: center;
     margin: 20px;
     text-align: center;
     left: 40;
-  }
-  
-  .team-member img {
-    width: 400px; /* Ajustez la taille de l'image selon vos besoins */
+}
+
+.team-member img {
+    width: 400px;
+    /* Ajustez la taille de l'image selon vos besoins */
     display: inline-flex;
     height: 400px;
-    border-radius: 50%; /* Pour une forme de cercle */
+    border-radius: 50%;
+    /* Pour une forme de cercle */
     padding: 40px;
     align-items: center;
-   
-  }
-  
-  .team-member h3 {
+
+}
+
+.team-member h3 {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-   margin-left: 40%;
+    margin-left: 40%;
 
-  }
-  
-  .team-member p {
+}
+
+.team-member p {
     margin-top: 5px;
     font-size: 14px;
     margin-left: 30%;
-  }
-  
+}
