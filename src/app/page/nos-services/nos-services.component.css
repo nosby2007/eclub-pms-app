@@ -1,0 +1,80 @@
+
+.header{
+    background-image: url(https://res.cloudinary.com/dtdpx59sc/image/upload/v1678495119/abu-dhabi-g7224939c2_1920_dmdcxa.jpg);
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    background-position: center;
+}
+
+.header h1{
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.header-text{
+    font-display: block;
+    box-sizing: border-box;
+    background-color: #39cc85;
+    height: 400px;
+    max-width: 36%;
+    width: 400px;
+}
+.header-text1{
+    font-display: block;
+    box-sizing: border-box;
+    background-color: #050505;
+    height: 400px;
+    max-width: 36%;
+    width: 400px;
+}
+
+.header-text h3{
+    color: #fff;
+    font-weight: 700;
+    padding-top: 19px;
+}
+.header-text1 h3{
+    color: #fff;
+    font-weight: 700;
+    padding-top: 19px;
+}
+
+.header-text ul li{
+    list-style-type:decimal;
+    font-size: 20px;
+    color: #fff;
+    padding-top: 1.5px;
+    margin-top: 18px;
+}
+.header-text1 ul li{
+    list-style-type:decimal;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.container-circle{
+    justify-content: space-between;
+    margin-top: 90px;
+}
+.container-circle .circle{
+    background-color:#39cc85;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 25px 25px;
+    z-index: 1;
+    position: relative;
+    top: -70px;
+}
+
+.container-circle img{
+    background: none;
+    border-radius: 50%;
+}
