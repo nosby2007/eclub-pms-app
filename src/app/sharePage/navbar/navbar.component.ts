@@ -1,6 +1,9 @@
 import { formatDate } from '@angular/common';
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { EmailValidator } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/Auth/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +17,7 @@ export class NavbarComponent{
   loggedInUser: any;
   user!: number;
   mynumber: any;
-  constructor(private router: Router) {
+  constructor(private router: Router, private auth:AngularFireAuth) {
     this.jstoday = formatDate(this.today, 'MMM dd, yyyy , hh:mm:ss a', 'en-US');
     this.mynumber = +4787870612;
   }
@@ -22,8 +25,14 @@ export class NavbarComponent{
      this.loggedInUser = sessionStorage.getItem('user');
   }
   logout() {
-    this.loggedInUser = null;
-    this.router.navigate(['signOut']);
-    alert('Merci pour votre visite' +' ' + 'A vous revoir Bientôt')
+    this.auth.signOut().then(()=>{
+      alert('Merci de votre visite au besoin, nous écrire à l\'\adresse nosby2007@gmail.com')
+      this.loggedInUser = null;
+      localStorage.removeItem('token');
+      this.router.navigate(['/login']);
+    }, (err:any)=>{
+      alert(err.message);
+    })  
+
   }
 }

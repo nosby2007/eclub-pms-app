@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Injectable } from '@angular/core';
+
 
 
 
@@ -19,7 +21,7 @@ import { RegisterComponent } from './sharePage/register/register.component';
 import { FooterComponent } from './sharePage/footer/footer.component';
 import { LogOutComponent } from './sharePage/log-out/log-out.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { firestore } from 'firebase-admin';
+import { database, firestore } from 'firebase-admin';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth'
@@ -38,7 +40,7 @@ import {AngularFireAuthModule} from '@angular/fire/compat/auth'
     LoginComponent,
     RegisterComponent,
     FooterComponent,
-    LogOutComponent
+    LogOutComponent, 
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,7 @@ import {AngularFireAuthModule} from '@angular/fire/compat/auth'
     apiKey: "AIzaSyAAVi7m8ipbRiWdWeg5TQt3fd4KZ0t4Uo0",
     authDomain: 'jade-fashion.firebaseapp.com',
     messagingSenderId: "810857774831",})
+    
     
   ],
   providers: [],

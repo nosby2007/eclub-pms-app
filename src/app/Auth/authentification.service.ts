@@ -31,9 +31,10 @@ export class AuthentificationService {
     })
   }
   //sign out 
-  logout(){
+  logout(name: string, firstname:string){
     this.fireAuth.signOut().then(()=>{
       localStorage.removeItem('token');
+      alert('merci pour votre visite' +name + 'a très bientôt')
       this.router.navigate(['/login']);
     }, (err:any)=>{
       alert(err.message);

@@ -9,6 +9,14 @@
                     <div class="mb-3">
                         <h4 class="text-dark text-muted">Register</h4>
                     </div>
+                    <div class="form-group">
+                        <label for="email" >Votre Nom</label>
+                        <input type="email" class="form-control" name="name" [(ngModel)]="name" required />
+                      </div>
+                      <div class="form-group">
+                        <label for="email" >Votre Prénom</label>
+                        <input type="email" class="form-control" name="firstName" [(ngModel)]="firstName" required />
+                      </div>
                     <div class="mb-3">
                         <label for="exempleInputEmail" class="form-label">Email Adress</label>
                         <input type="email" class="form-control" name="email" [(ngModel)]="email">
@@ -20,7 +28,7 @@
                     <button type="button" class="btn btn-info" (click)="register()">Register</button>
                     <div class="row">
                         <div class="col-md-6 mt-3">
-                            <a href="" class="text-dark" style="text-decoration: none;">Login</a>
+                            <a type="button" href="" class="btn btn-success" style="text-decoration: none;">Login</a>
                         </div>
                     </div>
                 </form>

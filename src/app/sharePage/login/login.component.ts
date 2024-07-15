@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { EmailValidator } from '@angular/forms';
 import { Router } from '@angular/router';
+import { auth } from 'firebase-admin';
+import { Auth } from 'firebase-admin/lib/auth/auth';
+import { AuthService } from 'src/app/Auth/auth.service';
 import { AuthentificationService } from 'src/app/Auth/authentification.service';
 
 @Component({
@@ -10,14 +15,25 @@ import { AuthentificationService } from 'src/app/Auth/authentification.service';
 export class LoginComponent implements OnInit {
   password: string = '';
   email: string = '';
+  name: string='';
+  firstName:string='';
+  loggedInUser!: null;
 
-  constructor(private router: Router, private auth: AuthentificationService) { }
+  constructor(private router: Router, private auth: AuthService, private auths:AngularFireAuth) { }
 
   ngOnInit(): void {
 
   }
 
   login() {
+    if (this.name == '') {
+      alert('veuillez entrer votre nom');
+      return;
+    }
+    if (this.firstName == '') {
+      alert('veuillez entrer votre prénom');
+      return;
+    }
     if (this.email == '') {
       alert('veuillez entrer votre email');
       return;
@@ -27,9 +43,13 @@ export class LoginComponent implements OnInit {
       return;
     }
     
-    this.auth.login(this.email, this.password)
+    this.auth.login(this.email, this.password, this.name, this.firstName)
 
     this.email = '';
     this.password = '';
+    this.name = '';
+    this.firstName = '';
   }
+
+  
 }
